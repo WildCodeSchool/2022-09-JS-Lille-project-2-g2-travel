@@ -1,3 +1,4 @@
+import "./reset.css";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
