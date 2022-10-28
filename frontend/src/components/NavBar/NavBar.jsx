@@ -1,8 +1,4 @@
 import "./navBar.css";
-// import { AiFillHome } from "react-icons/fa";
-// import { AiFillEnvironment } from "react-icons/fa";
-// import { AiFillCheckCircle } from "react-icons/fa";
-// import { AiFillMobile } from "react-icons/fa";
 
 export default function NavBar() {
   return (
