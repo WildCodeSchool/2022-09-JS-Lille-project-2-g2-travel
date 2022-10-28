@@ -1,10 +1,11 @@
 import "./reset.css";
 import "./App.css";
+import CTA from "@components/CTA/CTA";
 
 function App() {
   return (
     <div className="App">
-      <p>Coucou wilder</p>
+      <CTA />
     </div>
   );
 }
