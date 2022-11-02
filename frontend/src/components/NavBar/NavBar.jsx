@@ -1,5 +1,5 @@
 import "./navBar.css";
-// import { AiFillHome } from "react-icons/fa";
+import { AiFillHome } from "react-icons/fa";
 // import { AiFillEnvironment } from "react-icons/fa";
 // import { AiFillCheckCircle } from "react-icons/fa";
 // import { AiFillMobile } from "react-icons/fa";
@@ -9,8 +9,9 @@ export default function NavBar() {
     <div className="navigation">
       <ul>
         <li>
-          <a href="#Home">Home</a>
+          <a href="Home">Home</a>
         </li>
+        <AiFillHome />
         <li>
           <a href="Map">Map</a>
         </li>
