@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="Swiper">
-      <h1>Cities</h1>
+      <h1 classNme="cityTitle">Cities</h1>
       <Carousel />
     </div>
   );

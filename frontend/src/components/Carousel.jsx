@@ -1,8 +1,10 @@
-/* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// eslint-disable-next-line import/no-unresolved
 import "swiper/css";
+// eslint-disable-next-line import/no-unresolved
 import "swiper/css/pagination";
+// eslint-disable-next-line import/no-unresolved
 import "swiper/css/navigation";
 
 import "./carousel.css";
@@ -59,7 +61,7 @@ export default function Carousel() {
           alt="Rome"
           src="https://www.wanderlustchloe.com/wp-content/uploads/2020/10/Colosseum-Rome.jpg"
         />
-        <p className="text-block">Rome</p>
+        <p className="text-block">Roma</p>
       </SwiperSlide>
       <SwiperSlide>
         <img
