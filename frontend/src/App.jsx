@@ -1,6 +1,7 @@
 import "./reset.css";
 import "./App.css";
 import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
 
 const pointsOfInterest = [
@@ -49,6 +50,11 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Card
+        Title="Card Title"
+        ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
+        Body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi recusandae, sed quidem quod, in, iure assumenda quis maxime voluptatibus nemo quo inventore non ea deleniti? Nobis aperiam quae ea."
+      />
       <div className="map">
         <Mapping
           pointsOfInterest={pointsOfInterest}
