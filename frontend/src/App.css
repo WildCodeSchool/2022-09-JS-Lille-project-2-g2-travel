@@ -1,3 +1,14 @@
+.Swiper {
+  text-align: center;
+  height: 50vh;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.cityTitle {
+  font-size: 2rem;
+}
+
 .map {
   background-color: rgba(228, 228, 228, 0.486);
   padding: 1rem;
