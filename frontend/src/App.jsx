@@ -1,6 +1,8 @@
 import "./reset.css";
+import Carousel from "./components/Carousel";
 import "./App.css";
 import Header from "./components/Header/Header";
+import CTA from "@components/CTA/CTA";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
 
@@ -48,8 +50,12 @@ const pointsOfInterest = [
 
 function App() {
   return (
+    <div className="Swiper">
+      <h1 classNme="cityTitle">Cities</h1>
+      <Carousel />
     <div className="App">
       <Header />
+      <CTA />
       <Card
         Title="Card Title"
         ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"

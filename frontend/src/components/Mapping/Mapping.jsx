@@ -1,6 +1,8 @@
+// eslint-disable-next-line import/no-unresolved
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { PropTypes } from "prop-types";
 import "./Mapping.css";
+// eslint-disable-next-line import/no-unresolved
 import "leaflet/dist/leaflet.css";
 
 export default function Mapping({ pointsOfInterest, center }) {
