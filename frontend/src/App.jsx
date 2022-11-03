@@ -1,6 +1,7 @@
 import "./reset.css";
 import Carousel from "./components/Carousel";
 import "./App.css";
+import Header from "./components/Header/Header";
 import CTA from "@components/CTA/CTA";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
@@ -53,6 +54,7 @@ function App() {
       <h1 classNme="cityTitle">Cities</h1>
       <Carousel />
     <div className="App">
+      <Header />
       <CTA />
       <Card
         Title="Card Title"
