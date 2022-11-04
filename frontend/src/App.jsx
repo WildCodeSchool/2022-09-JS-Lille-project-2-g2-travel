@@ -1,6 +1,6 @@
 import "./reset.css";
 // eslint-disable-next-line import/no-named-as-default
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Carousel/Carousel";
 import "./App.css";
 import Mapping from "./components/Mapping/Mapping";
 
@@ -96,7 +96,7 @@ const EuropeanCities = [
 function App() {
   return (
     <div className="Swiper">
-      <h1 classNme="cityTitle">Cities</h1>
+      <h1 className="cityTitle">Cities</h1>
       <Carousel EuropeanCities={EuropeanCities} />
       <div className="map">
         <Mapping
