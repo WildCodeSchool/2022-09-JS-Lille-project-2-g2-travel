@@ -1,0 +1,21 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 35%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 6vh;
+}
+
+.home {
+  margin: 0 auto;
+  max-width: 70vw;
+  background-color: white;
+  position: relative;
+  top: 10vh;
+}
