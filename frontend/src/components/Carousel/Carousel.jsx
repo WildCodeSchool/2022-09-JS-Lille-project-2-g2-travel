@@ -1,22 +1,20 @@
-/* eslint-disable no-shadow */
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PropTypes } from "prop-types";
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved */
 import "swiper/css";
-// eslint-disable-next-line import/no-unresolved
 import "swiper/css/pagination";
-// eslint-disable-next-line import/no-unresolved
 import "swiper/css/navigation";
+/* eslint-enable import/no-unresolved */
 
 import "./carousel.css";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Carousel({
-  EuropeanCities,
-  Restaurants,
-  Museums,
-  Park,
+  europeanCities,
+  restaurants,
+  museums,
+  parks,
 }) {
   return (
     <Swiper
@@ -41,46 +39,46 @@ export default function Carousel({
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >
-      {EuropeanCities.map((EuropeanCities) => {
+      {europeanCities.map((europeanCity) => {
         return (
           <div>
             <SwiperSlide>
               <img
                 className="EuropeanCitiesImage"
-                src={EuropeanCities.img}
+                src={europeanCity.img}
                 alt="EuropeanImages"
               />
-              <p className="CitiesName">{EuropeanCities.cityName} </p>
+              <p className="CitiesName">{europeanCity.cityName} </p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {Restaurants.map((Restaurants) => {
+      {restaurants.map((restaurant) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{Restaurants.TypeName} </p>
+              <p>{restaurant.TypeName} </p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {Museums.map((Museums) => {
+      {museums.map((museum) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{Museums.TypeName} </p>
+              <p>{museum.TypeName} </p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {Park.map((Park) => {
+      {parks.map((park) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{Park.TypeName} </p>
+              <p>{park.TypeName} </p>
             </SwiperSlide>
           </div>
         );
@@ -90,23 +88,23 @@ export default function Carousel({
 }
 
 Carousel.propTypes = {
-  EuropeanCities: PropTypes.arrayOf(
+  europeanCities: PropTypes.arrayOf(
     PropTypes.shape({
       cityName: PropTypes.string,
       img: PropTypes.string,
     })
   ),
-  Restaurants: PropTypes.arrayOf(
+  restaurants: PropTypes.arrayOf(
     PropTypes.shape({
       TypeName: PropTypes.string,
     })
   ),
-  Museums: PropTypes.arrayOf(
+  museums: PropTypes.arrayOf(
     PropTypes.shape({
       TypeName: PropTypes.string,
     })
   ),
-  Park: PropTypes.arrayOf(
+  parks: PropTypes.arrayOf(
     PropTypes.shape({
       TypeName: PropTypes.string,
     })
@@ -114,8 +112,8 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
-  EuropeanCities: [],
-  Restaurants: [],
-  Museums: [],
-  Park: [],
+  europeanCities: [],
+  restaurants: [],
+  museums: [],
+  parks: [],
 };

@@ -1,7 +1,9 @@
 import "./reset.css";
-// eslint-disable-next-line import/no-named-as-default
 import Carousel from "./components/Carousel/Carousel";
 import "./App.css";
+import Header from "./components/Header/Header";
+import CTA from "./components/CTA/CTA";
+import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
 
 const pointsOfInterest = [
@@ -46,7 +48,7 @@ const pointsOfInterest = [
   },
 ];
 
-const EuropeanCities = [
+const europeanCities = [
   {
     img: "https://barcelonesite.fr/images/barcelona_2.jpg",
     cityName: "Barcelona",
@@ -97,12 +99,21 @@ function App() {
   return (
     <div className="Swiper">
       <h1 className="cityTitle">Cities</h1>
-      <Carousel EuropeanCities={EuropeanCities} />
-      <div className="map">
-        <Mapping
-          pointsOfInterest={pointsOfInterest}
-          center={[50.629306889542534, 3.021532266904478]}
+      <Carousel europeanCities={europeanCities} />
+      <div className="App">
+        <Header />
+        <CTA />
+        <Card
+          Title="Card Title"
+          ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
+          Body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi recusandae, sed quidem quod, in, iure assumenda quis maxime voluptatibus nemo quo inventore non ea deleniti? Nobis aperiam quae ea."
         />
+        <div className="map">
+          <Mapping
+            pointsOfInterest={pointsOfInterest}
+            center={[50.629306889542534, 3.021532266904478]}
+          />
+        </div>
       </div>
     </div>
   );

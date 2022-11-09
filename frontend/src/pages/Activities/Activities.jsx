@@ -1,10 +1,10 @@
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable import/no-unresolved, import/extensions */
 import "./reset.css";
-// eslint-disable-next-line import/no-unresolved, import/extensions
 import Carousel from "./frontend/src/components/Carousel/Carousel";
 import "./activities.css";
+/* eslint-enable import/no-unresolved, import/extensions */
 
-const Restaurants = [
+const restaurants = [
   {
     TypeName: "Indian Food",
   },
@@ -22,7 +22,7 @@ const Restaurants = [
   },
 ];
 
-const Museums = [
+const museums = [
   {
     TypeName: "The Louvre – Paris, France",
   },
@@ -40,7 +40,7 @@ const Museums = [
   },
 ];
 
-const Park = [
+const parks = [
   {
     TypeName: "The Louvre – Paris, France",
   },
@@ -63,13 +63,13 @@ function App() {
     <div className="SwiperContainer">
       <div className="Restaurants">
         <h1 className="Title">Restaurants</h1>
-        <Carousel Restaurants={Restaurants} />
+        <Carousel restaurants={restaurants} />
         <div className="Museums">
           <h1 className="Title">Museums</h1>
-          <Carousel Museums={Museums} />
+          <Carousel museums={museums} />
           <div className="Park">
             <h1 className="Title">Park</h1>
-            <Carousel Park={Park} />
+            <Carousel parks={parks} />
           </div>
         </div>
       </div>

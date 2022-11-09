@@ -1,12 +1,3 @@
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -19,6 +10,7 @@ body {
 .swiper {
   width: 80%;
   height: 100%;
+  position: relative;
 }
 
 .swiper-slide {
