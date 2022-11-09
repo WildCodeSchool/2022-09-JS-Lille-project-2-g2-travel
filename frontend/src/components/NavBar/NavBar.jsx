@@ -7,20 +7,20 @@ import { RiRoadMapLine } from "react-icons/ri";
 export default function NavBar() {
   return (
     <div className="navigation">
-      <ul>
-        <li>
+      <ul className="nav-desktop">
+        <li className="nav-list-desktop">
           <a href="Home">Home</a>
           <SlHome />
         </li>
-        <li>
+        <li className="nav-list-desktop">
           <a href="Map">Map</a>
           <RiRoadMapLine />
         </li>
-        <li>
+        <li className="nav-list-desktop">
           <a href="Activities">Activities</a>
           <FiShoppingBag />
         </li>
-        <li>
+        <li className="nav-list-desktop">
           <a href="Random">Random</a>
           <FaRandom />
         </li>

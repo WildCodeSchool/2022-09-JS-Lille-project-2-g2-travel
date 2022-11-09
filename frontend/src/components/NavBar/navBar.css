@@ -1,4 +1,4 @@
-li > a {
+.nav-list-desktop > a {
   font-weight: bold;
   color: black;
   cursor: pointer;
@@ -6,20 +6,20 @@ li > a {
   font-size: 1rem;
 }
 
-ul {
+.nav-desktop {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-li:hover,
-li:hover a {
-  background-color: black;
+.nav-list-desktop:hover,
+.nav-list-desktop:hover a {
+  background-color: #00958e;
   color: white;
   cursor: pointer;
 }
 
-li {
+.nav-list-desktop {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,4 +29,13 @@ li {
   font-size: 1rem;
   width: 10rem;
   height: 3rem;
+  transition: opacity 0.2s;
+}
+.nav-desktop:hover .nav-list-desktop:not(:hover) {
+  opacity: 0.5;
+}
+@media screen and (max-width: 600px) {
+  .nav-desktop {
+    display: none;
+  }
 }

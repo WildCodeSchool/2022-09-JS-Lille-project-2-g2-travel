@@ -1,3 +1,4 @@
+import "./carousel.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // eslint-disable-next-line import/no-unresolved
@@ -6,8 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 // eslint-disable-next-line import/no-unresolved
 import "swiper/css/navigation";
-
-import "./carousel.css";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
 

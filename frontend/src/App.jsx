@@ -1,10 +1,10 @@
 import "./reset.css";
-import Carousel from "./components/Carousel";
 import "./App.css";
-import Header from "./components/Header/Header";
 import CTA from "@components/CTA/CTA";
+import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
+import Carousel from "./components/Carousel/Carousel";
 
 const pointsOfInterest = [
   {
@@ -48,27 +48,26 @@ const pointsOfInterest = [
   },
 ];
 
-function App() {
+export default function App() {
   return (
     <div className="Swiper">
       <h1 classNme="cityTitle">Cities</h1>
-      <Carousel />
-    <div className="App">
-      <Header />
-      <CTA />
-      <Card
-        Title="Card Title"
-        ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
-        Body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi recusandae, sed quidem quod, in, iure assumenda quis maxime voluptatibus nemo quo inventore non ea deleniti? Nobis aperiam quae ea."
-      />
-      <div className="map">
-        <Mapping
-          pointsOfInterest={pointsOfInterest}
-          center={[50.629306889542534, 3.021532266904478]}
+      <div className="App">
+        <Header />
+        <CTA />
+        <Card
+          Title="Card Title"
+          ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
+          Body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi recusandae, sed quidem quod, in, iure assumenda quis maxime voluptatibus nemo quo inventore non ea deleniti? Nobis aperiam quae ea."
         />
+        <div className="map">
+          <Mapping
+            pointsOfInterest={pointsOfInterest}
+            center={[50.629306889542534, 3.021532266904478]}
+          />
+          <Carousel />
+        </div>
       </div>
     </div>
   );
 }
-
-export default App;

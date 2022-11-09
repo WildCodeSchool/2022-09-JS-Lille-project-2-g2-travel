@@ -18,5 +18,9 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "react-icons": "^4.6.0",
+    "swiper": "^8.4.4"
   }
 }
