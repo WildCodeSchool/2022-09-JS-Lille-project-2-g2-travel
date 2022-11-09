@@ -1,8 +1,5 @@
-/* eslint-disable import/no-unresolved, import/extensions */
-import "./reset.css";
-import Carousel from "./frontend/src/components/Carousel/Carousel";
+import Carousel from "../../components/Carousel/Carousel";
 import "./activities.css";
-/* eslint-enable import/no-unresolved, import/extensions */
 
 const restaurants = [
   {

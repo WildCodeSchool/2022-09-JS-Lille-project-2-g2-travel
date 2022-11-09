@@ -1,9 +1,8 @@
 import "./reset.css";
+import CTA from "./components/CTA/CTA";
 import Carousel from "./components/Carousel/Carousel";
 import "./App.css";
 import Header from "./components/Header/Header";
-// eslint-disable-next-line import/order, import/no-unresolved
-import CTA from "@components/CTA/CTA";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
 
