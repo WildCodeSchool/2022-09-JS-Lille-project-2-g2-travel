@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import SearchComponent from "../../components/SearchComponent/SearchComponent";
 import voyage from "../../assets/voyages-2.jpg";
-import Carousel from "../../components/Carousel";
+import Carousel from "../../components/Carousel/Carousel";
 import "./Home.css";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <div className="search">
           <SearchComponent />
         </div>
-        <img src={voyage} alt="" />
+        <img src={voyage} alt="voyage" />
       </div>
       <div className="carousel">
         <Carousel />
