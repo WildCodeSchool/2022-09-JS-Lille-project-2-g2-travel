@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../../components/Header/Header";
 import voyage from "../../assets/voyages-2.jpg";
-import Carousel from "../../components/Carousel";
+import Carousel from "../../components/Carousel/Carousel";
 import "./Home.css";
 
 export default function Home() {
