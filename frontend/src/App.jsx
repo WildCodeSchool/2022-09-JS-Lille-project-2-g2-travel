@@ -1,10 +1,38 @@
 import "./reset.css";
 import "./App.css";
 import CTA from "@components/CTA/CTA";
+import Location from "@components/Location/Location";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import Mapping from "./components/Mapping/Mapping";
 import Carousel from "./components/Carousel/Carousel";
+
+const cities = [
+  {
+    place: "Paris",
+    country: "France",
+  },
+  {
+    place: "Toulouse",
+    country: "France",
+  },
+  {
+    place: "Lisbonne",
+    country: "Portugal",
+  },
+  {
+    place: "Madrid",
+    country: "Espagne",
+  },
+  {
+    place: "Bruxelles",
+    country: "Belgique",
+  },
+  {
+    place: "Londres",
+    country: "Angleterre",
+  },
+];
 
 const pointsOfInterest = [
   {
@@ -51,13 +79,15 @@ const pointsOfInterest = [
 export default function App() {
   return (
     <div className="Swiper">
-      <h1 classNme="cityTitle">Cities</h1>
+      <h1 className="cityTitle">
+        <Location cities={cities[0]} />
+      </h1>
       <div className="App">
         <Header />
         <CTA />
         <Card
           Title="Card Title"
-          ImageUrl="cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
+          ImageUrl="https://cdn.pixabay.com/photo/2022/09/30/10/05/river-7489170_1280.jpg"
           Body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi recusandae, sed quidem quod, in, iure assumenda quis maxime voluptatibus nemo quo inventore non ea deleniti? Nobis aperiam quae ea."
         />
         <div className="map">
