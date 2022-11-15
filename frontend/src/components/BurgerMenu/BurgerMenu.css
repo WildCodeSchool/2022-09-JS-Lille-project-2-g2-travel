@@ -36,7 +36,7 @@
   .menuContainer {
     display: flex;
     position: relative;
-    z-index: 1000;
+    z-index: 3;
   }
   .menuContent {
     position: absolute;
