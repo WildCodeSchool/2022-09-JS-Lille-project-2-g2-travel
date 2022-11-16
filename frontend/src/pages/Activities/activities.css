@@ -1,0 +1,20 @@
+.Restaurants {
+  text-align: center;
+  height: 30vh;
+  width: 100%;
+}
+
+.Museums {
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+.Park {
+  text-align: center;
+  height: 40vh;
+  width: 100%;
+}
+.Title {
+  font-size: 2rem;
+  padding: 3%;
+}

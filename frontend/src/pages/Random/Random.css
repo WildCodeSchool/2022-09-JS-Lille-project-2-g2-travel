@@ -1,0 +1,30 @@
+.map-button-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5vh;
+}
+
+.app {
+  width: 70vw;
+  margin: 5rem auto;
+}
+
+#random-me-button {
+  border-radius: 1rem;
+  height: 4rem;
+  width: 14rem;
+  margin: 3rem auto;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+#random-me-button:hover {
+  background-color: rgba(0, 149, 142, 1);
+  color: white;
+}
+
+body {
+  height: fit-content;
+}

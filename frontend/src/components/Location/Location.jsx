@@ -1,6 +1,7 @@
 import "./location.css";
 import { PropTypes } from "prop-types";
 
+
 export default function Location({ cities }) {
   return (
     <div className="city-country">
