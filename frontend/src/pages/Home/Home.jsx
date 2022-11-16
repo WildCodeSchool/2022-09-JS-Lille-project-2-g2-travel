@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "../../components/Header/Header";
 import voyage from "../../assets/voyages-2.jpg";
 import Carousel from "../../components/Carousel/Carousel";
 import "./Home.css";
@@ -57,9 +56,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="home">
-      <Header />
-      <div className="main-home">
+    <div>
+      <div className="home">
         <div className="search">
           <input
             type="search"
