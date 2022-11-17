@@ -10,13 +10,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.nav-list-desktop:hover,
-.nav-list-desktop:hover a {
-  background-color: #00958e;
-  color: white;
-  cursor: pointer;
+  padding: 0;
 }
 
 .nav-list-desktop {
@@ -25,15 +19,31 @@
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 1rem;
-  border: 1px solid black;
   font-size: 1rem;
   width: 10rem;
   height: 3rem;
   transition: opacity 0.2s;
 }
+
 .nav-desktop:hover .nav-list-desktop:not(:hover) {
   opacity: 0.5;
 }
+
+.nav-links {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+.nav-links:hover {
+  background-color: rgba(0, 149, 142, 1);
+  color: white;
+  cursor: pointer;
+  border-color: rgba(0, 149, 142, 1);
+}
+
 @media screen and (max-width: 600px) {
   .nav-desktop {
     display: none;
