@@ -1,4 +1,3 @@
-import Header from "../../components/Header/Header";
 import Card from "../../components/Card/Card";
 import Mapping from "../../components/Mapping/Mapping";
 import imgRestau from "../../assets/restaurant.jpg";
@@ -49,27 +48,29 @@ const pointsOfInterest = [
 
 export default function Map() {
   return (
-    <div className="home">
-      <Header />
-      <div className="main">
-        <div className="cards">
-          <Card
-            Title="Restaurant"
-            ImageUrl={imgRestau}
-            Body="Decouvrez les meilleurs restaurants de Toulouse"
-          />
-          <Card
-            Title="Night Life"
-            ImageUrl={imgNightLife}
-            Body="Ready to PARTYYYYYY !!!!!!!"
-          />
-        </div>
-
-        <Mapping
-          pointsOfInterest={pointsOfInterest}
-          center={[50.629306889542534, 3.021532266904478]}
+    <div className="main">
+      <div className="cards">
+        <Card
+          Title="Restaurant"
+          ImageUrl={imgRestau}
+          Body="Decouvrez les meilleurs restaurants de Toulouse"
+        />
+        <Card
+          Title="Night Life"
+          ImageUrl={imgNightLife}
+          Body="Ready to PARTYYYYYY !!!!!!!"
+        />
+        <Card
+          Title="Restaurant"
+          ImageUrl={imgRestau}
+          Body="Decouvrez les meilleurs restaurants de Toulouse"
         />
       </div>
+
+      <Mapping
+        pointsOfInterest={pointsOfInterest}
+        center={[50.629306889542534, 3.021532266904478]}
+      />
     </div>
   );
 }

@@ -1,21 +1,22 @@
 .home {
-  margin: 4rem 12rem;
-}
-
-.main-home {
   width: 97%;
-  margin: 3rem auto;
+  margin: 1.5rem auto;
   height: 35rem;
+  position: relative;
+  top: 3rem;
 }
 
-.main-home img {
+.home img {
   height: 100%;
   width: 100%;
   border-radius: 1rem;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.home .carousel-home {
+.carousel-home {
   margin-top: 8rem;
 }
 
@@ -25,7 +26,7 @@ body {
 
 .search {
   position: relative;
-  top: 19rem;
+  top: 15.7rem;
   z-index: 1;
   margin: 0 auto;
   width: 70%;
@@ -42,6 +43,7 @@ body {
   background: url();
   background-color: rgb(255, 255, 255);
   text-align: center;
+  z-index: 1;
 }
 
 .footer-home {
