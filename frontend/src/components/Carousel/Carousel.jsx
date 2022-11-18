@@ -12,9 +12,12 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Carousel({
   europeanCities,
-  restaurants,
-  museums,
-  parks,
+  museumsData,
+  parksData,
+  restaurantsData,
+  barsData,
+  nightclubsData,
+  monumentsData,
 }) {
   return (
     <Swiper
@@ -54,35 +57,69 @@ export default function Carousel({
         );
       })}
 
-      {restaurants.map((restaurant) => {
+      {restaurantsData.map((restaurantData) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{restaurant.TypeName} </p>
+              <div key={restaurantData.id}>{restaurantData.name}</div>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {museums.map((museum) => {
+      {barsData.map((barData) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{museum.TypeName} </p>
+              <div key={barData.id}>{barData.name}</div>
+            </SwiperSlide>
+          </div>
+        );
+      })}
+      {museumsData.map((museumData) => {
+        return (
+          <div>
+            <SwiperSlide>
+              <p key={museumData.id}>{museumData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {parks.map((park) => {
+      {nightclubsData.map((nightclubData) => {
         return (
           <div>
             <SwiperSlide>
-              <p>{park.TypeName} </p>
+              <p key={nightclubData.id}>{nightclubData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
+
+      {parksData.map((parkData) => {
+        return (
+          <div>
+            <SwiperSlide>
+              <p key={parkData.id}>{parkData.name} </p>
+            </SwiperSlide>
+          </div>
+        );
+      })}
+
+      {monumentsData
+        .filter((monument) => {
+          if (monument.name) return true;
+          return false;
+        })
+        .map((monumentData) => {
+          return (
+            <div>
+              <SwiperSlide>
+                <p key={monumentData.id}>{monumentData.name} </p>
+              </SwiperSlide>
+            </div>
+          );
+        })}
     </Swiper>
   );
 }
@@ -94,26 +131,50 @@ Carousel.propTypes = {
       img: PropTypes.string,
     })
   ),
-  restaurants: PropTypes.arrayOf(
+  museumsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.string,
     })
   ),
-  museums: PropTypes.arrayOf(
+  restaurantsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.string,
     })
   ),
-  parks: PropTypes.arrayOf(
+  barsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.string,
+    })
+  ),
+  nightclubsData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.string,
+    })
+  ),
+  parksData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.string,
+    })
+  ),
+  monumentsData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.string,
     })
   ),
 };
 
 Carousel.defaultProps = {
   europeanCities: [],
-  restaurants: [],
-  museums: [],
-  parks: [],
+  museumsData: [],
+  nightclubsData: [],
+  parksData: [],
+  restaurantsData: [],
+  barsData: [],
+  monumentsData: [],
 };

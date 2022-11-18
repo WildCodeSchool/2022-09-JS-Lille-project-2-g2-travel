@@ -1,20 +1,50 @@
-.Restaurants {
-  text-align: center;
-  height: 30vh;
-  width: 100%;
+.home {
+  margin: 0 auto;
+  width: 80vw;
+  background-color: white;
+  position: relative;
+  border-style: dotted;
+  padding-bottom: 5%;
 }
 
-.Museums {
+.restaurants {
+  padding-top: 5%;
   text-align: center;
   height: 70vh;
   width: 100%;
 }
-.Park {
+
+.bars {
+  padding-top: 5%;
   text-align: center;
-  height: 40vh;
+  height: 70vh;
   width: 100%;
 }
-.Title {
-  font-size: 2rem;
-  padding: 3%;
+
+.museums {
+  padding-top: 5%;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.nightclubs {
+  padding-top: 5%;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.parks {
+  padding-top: 5%;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.monuments {
+  padding-top: 5%;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
 }
