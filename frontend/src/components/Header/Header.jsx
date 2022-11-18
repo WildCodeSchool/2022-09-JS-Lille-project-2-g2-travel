@@ -1,13 +1,13 @@
-import NavBar from "../NavBar/NavBar";
-import Logo from "../Logo/Logo";
-import Location from "../Location/Location";
+import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import "./header.css";
+import Logo from "../Logo/Logo";
+import NavBar from "../NavBar/NavBar";
 
 export default function Header() {
   return (
     <div className="header-nav">
       <div className="header">
-        <Location />
+        <BurgerMenu />
         <Logo />
       </div>
       <NavBar />

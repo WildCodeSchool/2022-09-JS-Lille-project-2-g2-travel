@@ -1,0 +1,11 @@
+@media screen and (max-width: 600px) {
+  h1 {
+    display: none;
+  }
+}
+.city-country {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
