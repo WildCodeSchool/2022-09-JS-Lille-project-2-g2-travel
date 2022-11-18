@@ -25,7 +25,7 @@
   transition: opacity 0.2s;
 }
 
-.nav-desktop:hover li:not(:hover) {
+.nav-desktop:hover .nav-list-desktop:not(:hover) {
   opacity: 0.5;
 }
 

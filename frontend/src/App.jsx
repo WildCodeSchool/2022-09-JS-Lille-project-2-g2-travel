@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import Activities from "./pages/Activities/Activities";
 import Random from "./pages/Random/Random";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div className="app">
@@ -22,5 +22,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
