@@ -1,77 +1,97 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import "./activities.css";
 
-const restaurants = [
-  {
-    TypeName: "Indian Food",
-  },
-  {
-    TypeName: "Italians",
-  },
-  {
-    TypeName: "Fast-Food",
-  },
-  {
-    TypeName: "Bakery",
-  },
-  {
-    TypeName: "Pubs",
-  },
-];
+function Activities() {
+  const [restaurants, setRestaurants] = useState([]);
+  const [museums, setMuseums] = useState([]);
+  const [nightclubs, setNightclubs] = useState([]);
+  const [parks, setParks] = useState([]);
+  const [monuments, setMonuments] = useState([]);
+  const [bars, setBars] = useState([]);
 
-const museums = [
-  {
-    TypeName: "The Louvre – Paris, France",
-  },
-  {
-    TypeName: "National Museum of China – Beijing, China",
-  },
-  {
-    TypeName: "Vatican Museums – Vatican City",
-  },
-  {
-    TypeName: "The Metropolitan Museum of Art – New York, USA",
-  },
-  {
-    TypeName: "British Museum – London, UK",
-  },
-];
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=restaurants&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
 
-const parks = [
-  {
-    TypeName: "The Louvre – Paris, France",
-  },
-  {
-    TypeName: "National Museum of China – Beijing, China",
-  },
-  {
-    TypeName: "Vatican Museums – Vatican City",
-  },
-  {
-    TypeName: "The Metropolitan Museum of Art – New York, USA",
-  },
-  {
-    TypeName: "British Museum – London, UK",
-  },
-];
+      .then(({ data }) => {
+        setRestaurants(data);
+      });
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=museums&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
+      .then(({ data }) => {
+        setMuseums(data);
+      });
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=nightclubs&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
+      .then(({ data }) => {
+        setNightclubs(data);
+      });
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=natural&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
+      .then(({ data }) => {
+        setParks(data);
+      });
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=monuments&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
+      .then(({ data }) => {
+        setMonuments(data);
+      });
+    axios
+      .get(
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=bars&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
+      )
 
-function App() {
+      .then(({ data }) => {
+        setBars(data);
+      });
+  }, []);
+
   return (
-    <div className="SwiperContainer">
-      <div className="Restaurants">
-        <h1 className="Title">Restaurants</h1>
-        <Carousel restaurants={restaurants} />
-        <div className="Museums">
-          <h1 className="Title">Museums</h1>
-          <Carousel museums={museums} />
-          <div className="Park">
-            <h1 className="Title">Park</h1>
-            <Carousel parks={parks} />
-          </div>
-        </div>
+    <div>
+      <div className="restaurants">
+        <Carousel restaurantsData={restaurants} />
+      </div>
+      <div className="bars">
+        <Carousel barsData={bars} />
+      </div>
+      <div className="museums">
+        <Carousel museumsData={museums} />
+      </div>
+      <div className="nightclubs">
+        <Carousel nightclubsData={nightclubs} />
+      </div>
+      <div className="parks">
+        <Carousel parksData={parks} />
+      </div>
+      <div className="monuments">
+        <Carousel monumentsData={monuments} />
       </div>
     </div>
   );
 }
 
-export default App;
+export default Activities;
