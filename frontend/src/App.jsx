@@ -1,6 +1,7 @@
 import "./reset.css";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { SearchContextProvider } from "./contexts/CityContext";
 import Header from "./components/Header/Header";
 import Map from "./pages/Map/Map";
 import Home from "./pages/Home/Home";
@@ -9,16 +10,18 @@ import Random from "./pages/Random/Random";
 
 export default function App() {
   return (
-    <Router>
-      <div className="app">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/map" element={<Map />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/random" element={<Random />} />
-        </Routes>
-      </div>
-    </Router>
+    <SearchContextProvider>
+      <Router>
+        <div className="app">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/random" element={<Random />} />
+          </Routes>
+        </div>
+      </Router>
+    </SearchContextProvider>
   );
 }
