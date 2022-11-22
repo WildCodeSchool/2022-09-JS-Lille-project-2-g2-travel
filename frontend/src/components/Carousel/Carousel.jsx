@@ -44,14 +44,14 @@ export default function Carousel({
     >
       {europeanCities.map((europeanCity) => {
         return (
-          <div>
+          <div key={europeanCities.id}>
             <SwiperSlide>
               <img
-                className="EuropeanCitiesImage"
+                className="image"
                 src={europeanCity.img}
                 alt="EuropeanImages"
               />
-              <p className="CitiesName">{europeanCity.cityName} </p>
+              <p className="name">{europeanCity.cityName} </p>
             </SwiperSlide>
           </div>
         );
@@ -59,9 +59,9 @@ export default function Carousel({
 
       {restaurantsData.map((restaurantData) => {
         return (
-          <div>
+          <div key={restaurantData.id}>
             <SwiperSlide>
-              <div key={restaurantData.id}>{restaurantData.name}</div>
+              <p className="name">{restaurantData.name}</p>
             </SwiperSlide>
           </div>
         );
@@ -69,43 +69,40 @@ export default function Carousel({
 
       {barsData.map((barData) => {
         return (
-          <div>
+          <div key={barData.id}>
             <SwiperSlide>
-              <div key={barData.id}>{barData.name}</div>
+              <div className="name">{barData.name}</div>
             </SwiperSlide>
           </div>
         );
       })}
       {museumsData.map((museumData) => {
         return (
-          <div>
+          <div key={museumData.id}>
             <SwiperSlide>
-              <p key={museumData.id}>{museumData.name} </p>
+              <p className="name">{museumData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
-
       {nightclubsData.map((nightclubData) => {
         return (
-          <div>
+          <div key={nightclubData.id}>
             <SwiperSlide>
-              <p key={nightclubData.id}>{nightclubData.name} </p>
+              <p className="name">{nightclubData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
-
       {parksData.map((parkData) => {
         return (
-          <div>
+          <div key={parkData.id}>
             <SwiperSlide>
-              <p key={parkData.id}>{parkData.name} </p>
+              <p className="name">{parkData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
-
       {monumentsData
         .filter((monument) => {
           if (monument.name) return true;
@@ -113,9 +110,9 @@ export default function Carousel({
         })
         .map((monumentData) => {
           return (
-            <div>
+            <div key={monumentData.id}>
               <SwiperSlide>
-                <p key={monumentData.id}>{monumentData.name} </p>
+                <p className="name">{monumentData.name} </p>
               </SwiperSlide>
             </div>
           );
@@ -129,42 +126,50 @@ Carousel.propTypes = {
     PropTypes.shape({
       cityName: PropTypes.string,
       img: PropTypes.string,
+      id: PropTypes.number,
     })
   ),
   museumsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
   restaurantsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
+
   barsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
   nightclubsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
   parksData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
   monumentsData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      id: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
 };
