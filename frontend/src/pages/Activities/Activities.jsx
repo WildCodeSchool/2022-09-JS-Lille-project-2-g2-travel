@@ -14,7 +14,9 @@ function Activities() {
   useEffect(() => {
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=restaurants&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=restaurants&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
 
       .then(({ data }) => {
@@ -22,35 +24,45 @@ function Activities() {
       });
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=museums&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=museums&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
       .then(({ data }) => {
         setMuseums(data);
       });
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=nightclubs&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=nightclubs&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
       .then(({ data }) => {
         setNightclubs(data);
       });
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=natural&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=natural&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
       .then(({ data }) => {
         setParks(data);
       });
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=monuments&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=monuments&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
       .then(({ data }) => {
         setMonuments(data);
       });
     axios
       .get(
-        "https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=bars&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6b14f040c07396c1a0e2476b4453a2e85"
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=1000&lon=3.05858&lat=50.63297&kinds=bars&format=json&limit=10&apikey=${
+          import.meta.env.VITE_APIKEY
+        }`
       )
 
       .then(({ data }) => {
