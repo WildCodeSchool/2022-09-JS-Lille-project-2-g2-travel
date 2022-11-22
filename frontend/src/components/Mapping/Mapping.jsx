@@ -1,8 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { PropTypes } from "prop-types";
+import L from "leaflet";
+import MapView from "../MapView/MapView";
 import "./Mapping.css";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import icon from "../../assets/iconTravel.png";
 
 export default function Mapping({ pointsOfInterest, center }) {
@@ -28,6 +29,7 @@ export default function Mapping({ pointsOfInterest, center }) {
         minWidth: "60%",
       }}
     >
+      <MapView coords={center} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -38,16 +40,17 @@ export default function Mapping({ pointsOfInterest, center }) {
         </Popup>
       </Marker>
       {pointsOfInterest.map((pointOfInterest) => {
+        const [lat, lng] = pointOfInterest.geometry.coordinates;
         return (
           <Marker
             key={pointOfInterest.id}
-            position={pointOfInterest.position}
+            position={[lng, lat]}
             icon={iconTravel}
           >
             <Popup>
-              <h1>{pointOfInterest.name}</h1>
-              <sub>{pointOfInterest.category}</sub>
-              <p>{pointOfInterest.description}</p>
+              <h1>{pointOfInterest.properties.name}</h1>
+              <sub>To fill</sub>
+              <p>To fill</p>
             </Popup>
           </Marker>
         );
@@ -59,11 +62,15 @@ export default function Mapping({ pointsOfInterest, center }) {
 Mapping.propTypes = {
   pointsOfInterest: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      description: PropTypes.string,
-      category: PropTypes.string,
-      position: PropTypes.arrayOf(PropTypes.number),
+      id: PropTypes.string,
+      geometry: PropTypes.shape({
+        type: PropTypes.string,
+        coordinates: PropTypes.arrayOf(PropTypes.number),
+      }),
+      properties: PropTypes.shape({
+        name: PropTypes.string,
+        dist: PropTypes.number,
+      }),
     })
   ),
   center: PropTypes.arrayOf(PropTypes.number),
