@@ -11,7 +11,7 @@ function SearchComponent() {
       <form>
         <input
           type="search"
-          id="search"
+          id="search_SearchComponent"
           name="q"
           placeholder="Quelle destination?"
           value={resultSearch}

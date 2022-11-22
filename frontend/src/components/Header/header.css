@@ -13,9 +13,14 @@
   justify-content: space-around;
   height: 18vh;
 }
+
 @media (max-width: 600px) {
   .header {
-    justify-content: flex-end;
-    margin: 1em 1em 0 0;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 5rem;
+  }
+  .header-nav {
+    height: 0;
   }
 }

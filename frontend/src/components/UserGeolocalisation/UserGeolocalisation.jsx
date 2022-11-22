@@ -24,7 +24,7 @@ function UserGeolocalisation() {
       <button type="button" id="geoloc" onClick={getUserCoordinates}>
         Get my position
       </button>
-      <h1>Your coordinates are: {[lat, long]}</h1>
+      <h1 className="coordonnees">Your coordinates are: {[lat, long]}</h1>
     </div>
   );
 }

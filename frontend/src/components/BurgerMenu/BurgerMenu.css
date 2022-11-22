@@ -3,17 +3,19 @@
 }
 @media (max-width: 600px) {
   .hamburger {
-    display: flex;
     color: #00958e;
     list-style: none;
     text-decoration: none;
   }
-  nav .nav-list {
+  .nav-list-burger {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     right: 0;
+    height: 15rem;
+    width: auto;
   }
-  .nav-list .nav-item {
+  .nav-item-burger {
     cursor: pointer;
     height: 100%;
     padding: 5px 10px 5px 10px;
@@ -24,20 +26,27 @@
     align-items: center;
     font-size: 1rem;
   }
-  .nav-list .nav-link {
+
+  .nav-list-burger .nav-link-burger {
     color: #f1f1f1;
     font-size: 1rem;
   }
-  .nav-list .nav-link :hover {
+
+  .nav-list-burger .nav-link-burger :hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
+
   .menuContainer {
     display: flex;
     position: relative;
     z-index: 3;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    margin-right: 2rem;
   }
+
   .menuContent {
     position: absolute;
     top: 100%;
@@ -48,9 +57,14 @@
     aspect-ratio: 1;
     background: #00958e;
   }
+
   .menuContent.open {
     left: -600%;
     opacity: 1;
-    background-color: 00958e;
+    background-color: #00958e;
+  }
+
+  .nav-links-burger {
+    text-decoration: none;
   }
 }

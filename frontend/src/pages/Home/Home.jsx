@@ -1,7 +1,13 @@
 import { useState } from "react";
+import Header from "@components/Header/Header";
+
+import CTA from "@components/CTA/CTA";
+import "./Home.css";
+
+import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
+import LogoMobile from "@components/LogoMobile/LogoMobile";
 import voyage from "../../assets/voyages-2.jpg";
 import Carousel from "../../components/Carousel/Carousel";
-import "./Home.css";
 
 export default function Home() {
   const [resultSearch, setResultSearch] = useState("");
@@ -57,6 +63,9 @@ export default function Home() {
 
   return (
     <div>
+      <LogoDesktop />
+      <LogoMobile />
+      <Header />
       <div className="home">
         <div className="search">
           <input
@@ -69,6 +78,9 @@ export default function Home() {
           />
         </div>
         <img src={voyage} alt="main-img-home" />
+      </div>
+      <div className="localiseMe">
+        <CTA />
       </div>
       <div className="carousel-home">
         <Carousel europeanCities={europeanCities} />

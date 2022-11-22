@@ -4,6 +4,7 @@ import { SlHome } from "react-icons/sl";
 import { FiShoppingBag } from "react-icons/fi";
 import { RiRoadMapLine } from "react-icons/ri";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function BurgerMenu() {
   const [click, setCLick] = useState(false);
@@ -18,37 +19,37 @@ export default function BurgerMenu() {
         tabIndex={0}
       >
         {click ? (
-          <FaTimes size={20} style={{ color: "#000" }} />
+          <FaTimes size={30} style={{ color: "#00958e" }} />
         ) : (
-          <FaBars size={20} styles={{ color: "#000" }} />
+          <FaBars size={30} styles={{ color: " #00958e" }} />
         )}
       </div>
       <nav className={`menuContent ${click ? "open" : "closed"}`}>
-        <ul className="nav-list">
-          <li className="nav-item">
-            <a className="nav-link" href="Home">
+        <ul className="nav-list-burger">
+          <NavLink to="/" className="nav-link-burger">
+            <li className="nav-item-burger">
               Home
-            </a>
-            <SlHome />
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="Map">
+              <SlHome />
+            </li>
+          </NavLink>
+          <NavLink to="/map" className="nav-links-burger">
+            <li className="nav-item-burger">
               Map
-            </a>
-            <RiRoadMapLine />
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="Activities">
+              <RiRoadMapLine />
+            </li>
+          </NavLink>
+          <NavLink to="/activities" className="nav-links-burger">
+            <li className="nav-item-burger">
               Activities
-            </a>
-            <FiShoppingBag />
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="Random">
+              <FiShoppingBag />
+            </li>
+          </NavLink>
+          <NavLink to="/random" className="nav-links-burger">
+            <li className="nav-item-burger">
               Random
-            </a>
-            <FaRandom />
-          </li>
+              <FaRandom />
+            </li>
+          </NavLink>
         </ul>
       </nav>
     </div>

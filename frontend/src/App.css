@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #f1f1f1;
 }
 
 .cards {
@@ -28,4 +28,10 @@ body {
 
 .app {
   margin: 4rem 12rem;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    margin: 0;
+  }
 }
