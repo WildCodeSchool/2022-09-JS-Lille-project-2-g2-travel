@@ -45,7 +45,7 @@ export default function Carousel({
       {europeanCities.map((europeanCity) => {
         return (
           <div key={europeanCities.id}>
-            <SwiperSlide>
+            <SwiperSlide key={europeanCities.id}>
               <img
                 className="image"
                 src={europeanCity.img}
@@ -60,7 +60,7 @@ export default function Carousel({
       {restaurantsData.map((restaurantData) => {
         return (
           <div key={restaurantData.id}>
-            <SwiperSlide>
+            <SwiperSlide key={restaurantData.id}>
               <p className="name">{restaurantData.name}</p>
             </SwiperSlide>
           </div>
@@ -70,7 +70,7 @@ export default function Carousel({
       {barsData.map((barData) => {
         return (
           <div key={barData.id}>
-            <SwiperSlide>
+            <SwiperSlide key={barData.id}>
               <div className="name">{barData.name}</div>
             </SwiperSlide>
           </div>
@@ -79,7 +79,7 @@ export default function Carousel({
       {museumsData.map((museumData) => {
         return (
           <div key={museumData.id}>
-            <SwiperSlide>
+            <SwiperSlide key={museumData.id}>
               <p className="name">{museumData.name} </p>
             </SwiperSlide>
           </div>
@@ -88,7 +88,7 @@ export default function Carousel({
       {nightclubsData.map((nightclubData) => {
         return (
           <div key={nightclubData.id}>
-            <SwiperSlide>
+            <SwiperSlide key={nightclubData.id}>
               <p className="name">{nightclubData.name} </p>
             </SwiperSlide>
           </div>
@@ -97,7 +97,7 @@ export default function Carousel({
       {parksData.map((parkData) => {
         return (
           <div key={parkData.id}>
-            <SwiperSlide>
+            <SwiperSlide key={parkData.id}>
               <p className="name">{parkData.name} </p>
             </SwiperSlide>
           </div>
@@ -111,7 +111,7 @@ export default function Carousel({
         .map((monumentData) => {
           return (
             <div key={monumentData.id}>
-              <SwiperSlide>
+              <SwiperSlide key={monumentData.id}>
                 <p className="name">{monumentData.name} </p>
               </SwiperSlide>
             </div>
