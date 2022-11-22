@@ -12,9 +12,12 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Carousel({
   europeanCities,
-  restaurants,
-  museums,
-  parks,
+  museumsData,
+  parksData,
+  restaurantsData,
+  barsData,
+  nightclubsData,
+  monumentsData,
 }) {
   return (
     <Swiper
@@ -41,48 +44,79 @@ export default function Carousel({
     >
       {europeanCities.map((europeanCity) => {
         return (
-          <div>
-            <SwiperSlide>
+          <div key={europeanCities.id}>
+            <SwiperSlide key={europeanCities.id}>
               <img
-                className="EuropeanCitiesImage"
+                className="image"
                 src={europeanCity.img}
                 alt="EuropeanImages"
               />
-              <p className="CitiesName">{europeanCity.cityName} </p>
+              <p className="name">{europeanCity.cityName} </p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {restaurants.map((restaurant) => {
+      {restaurantsData.map((restaurantData) => {
         return (
-          <div>
-            <SwiperSlide>
-              <p>{restaurant.TypeName} </p>
+          <div key={restaurantData.id}>
+            <SwiperSlide key={restaurantData.id}>
+              <p className="name">{restaurantData.name}</p>
             </SwiperSlide>
           </div>
         );
       })}
 
-      {museums.map((museum) => {
+      {barsData.map((barData) => {
         return (
-          <div>
-            <SwiperSlide>
-              <p>{museum.TypeName} </p>
+          <div key={barData.id}>
+            <SwiperSlide key={barData.id}>
+              <div className="name">{barData.name}</div>
             </SwiperSlide>
           </div>
         );
       })}
-
-      {parks.map((park) => {
+      {museumsData.map((museumData) => {
         return (
-          <div>
-            <SwiperSlide>
-              <p>{park.TypeName} </p>
+          <div key={museumData.id}>
+            <SwiperSlide key={museumData.id}>
+              <p className="name">{museumData.name} </p>
             </SwiperSlide>
           </div>
         );
       })}
+      {nightclubsData.map((nightclubData) => {
+        return (
+          <div key={nightclubData.id}>
+            <SwiperSlide key={nightclubData.id}>
+              <p className="name">{nightclubData.name} </p>
+            </SwiperSlide>
+          </div>
+        );
+      })}
+      {parksData.map((parkData) => {
+        return (
+          <div key={parkData.id}>
+            <SwiperSlide key={parkData.id}>
+              <p className="name">{parkData.name} </p>
+            </SwiperSlide>
+          </div>
+        );
+      })}
+      {monumentsData
+        .filter((monument) => {
+          if (monument.name) return true;
+          return false;
+        })
+        .map((monumentData) => {
+          return (
+            <div key={monumentData.id}>
+              <SwiperSlide key={monumentData.id}>
+                <p className="name">{monumentData.name} </p>
+              </SwiperSlide>
+            </div>
+          );
+        })}
     </Swiper>
   );
 }
@@ -92,28 +126,60 @@ Carousel.propTypes = {
     PropTypes.shape({
       cityName: PropTypes.string,
       img: PropTypes.string,
+      id: PropTypes.number,
     })
   ),
-  restaurants: PropTypes.arrayOf(
+  museumsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
-  museums: PropTypes.arrayOf(
+  restaurantsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
-  parks: PropTypes.arrayOf(
+
+  barsData: PropTypes.arrayOf(
     PropTypes.shape({
-      TypeName: PropTypes.string,
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
+    })
+  ),
+  nightclubsData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
+    })
+  ),
+  parksData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
+    })
+  ),
+  monumentsData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      id: PropTypes.number,
+      img: PropTypes.string,
     })
   ),
 };
 
 Carousel.defaultProps = {
   europeanCities: [],
-  restaurants: [],
-  museums: [],
-  parks: [],
+  museumsData: [],
+  nightclubsData: [],
+  parksData: [],
+  restaurantsData: [],
+  barsData: [],
+  monumentsData: [],
 };
