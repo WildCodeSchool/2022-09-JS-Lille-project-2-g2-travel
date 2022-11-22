@@ -1,9 +1,7 @@
 import { useState } from "react";
 import Header from "@components/Header/Header";
-
 import CTA from "@components/CTA/CTA";
 import "./Home.css";
-
 import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
 import LogoMobile from "@components/LogoMobile/LogoMobile";
 import voyage from "../../assets/voyages-2.jpg";
