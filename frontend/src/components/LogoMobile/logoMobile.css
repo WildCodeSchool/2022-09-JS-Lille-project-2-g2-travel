@@ -1,13 +1,13 @@
 @media screen and (max-width: 600px) {
   .logoMobile {
     display: flex;
-    width: 15rem;
+    width: 12rem;
     height: auto;
     padding: 5rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     position: absolute;
+    left: 8%;
     top: 100%;
-    left: 17%;
     background-image: #ffff;
   }
   .logo_responsive {
