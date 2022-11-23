@@ -1,6 +1,8 @@
 import Header from "@components/Header/Header";
 import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
 import { useContext } from "react";
+import imgHistorique from "@assets/historique.jpg";
+import imgBar from "@assets/bar.jpg";
 import SearchContext from "../../contexts/CityContext";
 import Card from "../../components/Card/Card";
 import Mapping from "../../components/Mapping/Mapping";
@@ -18,28 +20,25 @@ export default function Map() {
       <div className="main">
         <div className="cards">
           <Card
+            Title="Historique"
+            ImageUrl={imgHistorique}
+            Body="L'opéra de Lille"
+          />
+          <Card
             Title="Restaurant"
             ImageUrl={imgRestau}
             Body="Decouvrez les meilleurs restaurants de Toulouse"
           />
+          <Card Title="Bar" ImageUrl={imgBar} Body="Pour débuter une soirée" />
           <Card
             Title="Night Life"
             ImageUrl={imgNightLife}
             Body="Ready to PARTYYYYYY !!!!!!!"
           />
-          <Card
-            Title="Restaurant"
-            ImageUrl={imgRestau}
-            Body="Decouvrez les meilleurs restaurants de Toulouse"
-          />
         </div>
 
-        <Mapping
-          pointsOfInterest={pointsOfInterest}
-          center={[50.629306889542534, 3.021532266904478]}
-        />
+        <Mapping pointsOfInterest={pointsOfInterest} center={coords} />
       </div>
-
     </div>
   );
 }

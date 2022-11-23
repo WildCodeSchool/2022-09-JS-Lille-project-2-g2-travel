@@ -9,7 +9,6 @@ import Carousel from "../../components/Carousel/Carousel";
 import SearchContext from "../../contexts/CityContext";
 import "./Home.css";
 
-
 export default function Home() {
   const { setDbValue } = useContext(SearchContext);
   const [resultSearch, setResultSearch] = useState("");
