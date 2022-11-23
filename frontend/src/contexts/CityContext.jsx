@@ -47,7 +47,7 @@ export function SearchContextProvider({ children }) {
   useEffect(() => {
     axios
       .get(
-        `https://api.opentripmap.com/0.1/en/places/radius?radius=3000&lon=${lon}&lat=${lat}&limit=5&kinds=foods&apikey=${
+        `https://api.opentripmap.com/0.1/en/places/radius?radius=3000&lon=${lon}&lat=${lat}&limit=20&kinds=foods&2Cmuseums&2Chistoric&apikey=${
           import.meta.env.VITE_APIKEY
         }`
       )
