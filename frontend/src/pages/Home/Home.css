@@ -49,3 +49,19 @@ body {
 .footer-home {
   height: 3rem;
 }
+.localiseMe {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .home,
+  #search,
+  .carousel-home {
+    display: none;
+  }
+  .localiseMe {
+    display: flex;
+    margin-top: 20rem;
+    align-content: center;
+    justify-content: center;
+  }
+}

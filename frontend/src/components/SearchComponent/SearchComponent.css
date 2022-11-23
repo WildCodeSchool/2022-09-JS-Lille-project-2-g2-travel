@@ -1,4 +1,4 @@
-#search {
+#search_SearchComponent {
   border-radius: 40px;
   border: solid 1px black;
   outline: none;
@@ -8,4 +8,11 @@
   background: url();
   background-color: rgba(0, 149, 142, 0.1);
   text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  #search_SearchComponent {
+    margin: 15rem 0 1rem 0;
+  }
 }

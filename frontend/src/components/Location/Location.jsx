@@ -1,15 +1,10 @@
 import "./location.css";
-import { PropTypes } from "prop-types";
 
-export default function Location({ cities }) {
+export default function Location() {
   return (
     <div className="city-country">
-      <h1>{cities.place}</h1>
-      <h2>{cities.country}</h2>
+      <h1>Lille</h1>
+      <h2>France</h2>
     </div>
   );
 }
-
-Location.propTypes = {
-  cities: PropTypes.string.isRequired,
-};

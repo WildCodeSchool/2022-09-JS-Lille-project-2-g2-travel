@@ -4,7 +4,7 @@ import "./CTA.css";
 
 function CTA() {
   return (
-    <div>
+    <div className="CTA">
       <SearchComponent />
       <UserGeolocalisation />
     </div>

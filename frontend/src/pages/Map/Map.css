@@ -30,3 +30,15 @@
   top: 6vh;
   padding-right: 1.5rem;
 }
+
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column-reverse;
+    top: 0;
+    padding-right: 0;
+  }
+  .cards {
+    height: 20rem;
+    width: 100%;
+  }
+}

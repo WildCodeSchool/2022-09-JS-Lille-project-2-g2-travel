@@ -27,6 +27,7 @@ export default function Mapping({ pointsOfInterest, center }) {
         height: "32rem",
         borderRadius: "1rem",
         minWidth: "60%",
+        zIndex: 1,
       }}
     >
       <MapView coords={center} />
@@ -39,22 +40,24 @@ export default function Mapping({ pointsOfInterest, center }) {
           <h1>Your Position</h1>
         </Popup>
       </Marker>
-      {pointsOfInterest.map((pointOfInterest) => {
-        const [lat, lng] = pointOfInterest.geometry.coordinates;
-        return (
-          <Marker
-            key={pointOfInterest.id}
-            position={[lng, lat]}
-            icon={iconTravel}
-          >
-            <Popup>
-              <h1>{pointOfInterest.properties.name}</h1>
-              <sub>To fill</sub>
-              <p>To fill</p>
-            </Popup>
-          </Marker>
-        );
-      })}
+      {pointsOfInterest
+        .filter((pointOfInterest) => pointOfInterest.name !== "")
+        .map((pointOfInterest) => {
+          const [lat, lng] = pointOfInterest.geometry.coordinates;
+          return (
+            <Marker
+              key={pointOfInterest.id}
+              position={[lng, lat]}
+              icon={iconTravel}
+            >
+              <Popup>
+                <h1>{pointOfInterest.name}</h1>
+                <sub>To fill</sub>
+                <p>To fill</p>
+              </Popup>
+            </Marker>
+          );
+        })}
     </MapContainer>
   );
 }
