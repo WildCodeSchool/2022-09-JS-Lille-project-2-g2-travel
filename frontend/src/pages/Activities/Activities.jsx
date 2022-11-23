@@ -1,7 +1,7 @@
-import Header from "@components/Header/Header";
-import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import Header from "../../components/Header/Header";
+import LogoDesktop from "../../components/LogoDesktop/LogoDesktop";
 import Carousel from "../../components/Carousel/Carousel";
 import "./activities.css";
 
@@ -77,21 +77,27 @@ function Activities() {
       <Header />
       <LogoDesktop />
       <div className="restaurants">
+        <h2 className="TitleCarousel">Restaurants</h2>
         <Carousel restaurantsData={restaurants} />
       </div>
       <div className="bars">
+        <h2 className="TitleCarousel">Bars</h2>
         <Carousel barsData={bars} />
       </div>
       <div className="museums">
+        <h2 className="TitleCarousel">Museums</h2>
         <Carousel museumsData={museums} />
       </div>
       <div className="nightclubs">
+        <h2 className="TitleCarousel">Nightclubs</h2>
         <Carousel nightclubsData={nightclubs} />
       </div>
       <div className="parks">
+        <h2 className="TitleCarousel">Parks</h2>
         <Carousel parksData={parks} />
       </div>
       <div className="monuments">
+        <h2 className="TitleCarousel">Monuments</h2>
         <Carousel monumentsData={monuments} />
       </div>
     </div>
