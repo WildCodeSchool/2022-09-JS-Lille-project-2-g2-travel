@@ -1,3 +1,5 @@
+import Header from "@components/Header/Header";
+import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Carousel from "../../components/Carousel/Carousel";
@@ -72,6 +74,8 @@ function Activities() {
 
   return (
     <div>
+      <Header />
+      <LogoDesktop />
       <div className="restaurants">
         <Carousel restaurantsData={restaurants} />
       </div>

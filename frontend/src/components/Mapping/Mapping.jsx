@@ -27,6 +27,7 @@ export default function Mapping({ pointsOfInterest, center }) {
         height: "32rem",
         borderRadius: "1rem",
         minWidth: "60%",
+        zIndex: 1,
       }}
     >
       <MapView coords={center} />

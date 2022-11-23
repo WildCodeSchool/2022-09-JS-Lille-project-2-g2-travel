@@ -2,7 +2,6 @@ import "./reset.css";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SearchContextProvider } from "./contexts/CityContext";
-import Header from "./components/Header/Header";
 import Map from "./pages/Map/Map";
 import Home from "./pages/Home/Home";
 import Activities from "./pages/Activities/Activities";
@@ -13,7 +12,6 @@ export default function App() {
     <SearchContextProvider>
       <Router>
         <div className="app">
-          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/map" element={<Map />} />
