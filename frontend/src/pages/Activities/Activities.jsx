@@ -1,7 +1,7 @@
-import Header from "@components/Header/Header";
-import LogoDesktop from "@components/LogoDesktop/LogoDesktop";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import Header from "../../components/Header/Header";
+import LogoDesktop from "../../components/LogoDesktop/LogoDesktop";
 import Carousel from "../../components/Carousel/Carousel";
 import "./activities.css";
 
